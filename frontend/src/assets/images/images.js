@@ -3,9 +3,10 @@
 // Swap any of these for owned/licensed photography whenever it's ready —
 // just replace the URL.
 
-// Hero — man smiling while working on a laptop (Vitaly Gariev, Unsplash License)
-export const heroImage =
-  'https://images.unsplash.com/photo-1758873267202-44c33e64f084?fm=jpg&q=80&w=900&h=1100&auto=format&fit=crop';
+// CareerForge hero artwork supplied for the homepage.
+import careerforgeHero from './careerforge-hero.png';
+
+export const heroImage = careerforgeHero;
 
 // Training — two people collaborating around a laptop (KOBU Agency, Unsplash License)
 export const trainingImage =
