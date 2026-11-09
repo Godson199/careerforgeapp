@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://careerforge-new-api.onrender.com';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://careerforgeapp-delta.vercel.app';
 const TRACKS = ['Data', 'Product', 'Software', 'Design'];
 
 export default function Apply() {

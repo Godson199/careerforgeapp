@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 # Serves uploaded résumés at, e.g.,
-# https://careerforge-api-i1v3.onrender.com/uploads/resumes/<file>.pdf
+# https://careerforgeapp-delta.vercel.app/uploads/resumes/<file>.pdf
 app.mount("/uploads", StaticFiles(directory=settings.UPLOAD_ROOT), name="uploads")
 
 app.include_router(auth.router)

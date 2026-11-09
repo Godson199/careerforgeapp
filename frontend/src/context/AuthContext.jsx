@@ -4,7 +4,7 @@ import { createContext, useContext, useState } from 'react';
 // (POST /api/auth/login, POST /api/auth/register) matching the JWT-auth
 // backend already running at API_BASE. Adjust the paths below if your
 // FastAPI routes are named differently.
-const API_BASE = 'https://careerforge-api-i1v3.onrender.com';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://careerforgeapp-delta.vercel.app';
 
 // TEMPORARY: while there's no real auth/security wired up yet, MOCK_AUTH
 // lets login succeed with ANY email + password so the student dashboard

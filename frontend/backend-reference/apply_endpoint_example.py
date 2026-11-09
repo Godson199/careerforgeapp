@@ -79,4 +79,4 @@ async def apply(
 #   app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 #
 # Then a résumé stored as "/uploads/resumes/<file>.pdf" becomes reachable
-# at:  https://careerforge-api-i1v3.onrender.com/uploads/resumes/<file>.pdf
+# at:  https://careerforgeapp-delta.vercel.app/uploads/resumes/<file>.pdf
