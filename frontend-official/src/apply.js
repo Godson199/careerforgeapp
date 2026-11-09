@@ -1,7 +1,8 @@
 const form = document.querySelector('#cf-application-form');
 
 if (form) {
-  const typeSelect = form.elements.applicationType;
+  const applicationTypeInput = form.elements.applicationType;
+  const typeButtons = [...document.querySelectorAll('[data-application-type]')];
   const internshipFields = document.querySelector('#cf-internship-fields');
   const cvInput = form.elements.cv;
   const portfolioInput = form.elements.portfolioUrl;
@@ -14,13 +15,25 @@ if (form) {
   const paymentError = document.querySelector('#cf-apply-payment-error');
   let applicationId;
 
-  const requestedType = new URLSearchParams(window.location.search).get('type');
-  if (requestedType === 'Training' || requestedType === 'Internship') {
-    typeSelect.value = requestedType;
+  const searchParams = new URLSearchParams(window.location.search);
+  const requestedType = searchParams.get('type') || searchParams.get('applicationType');
+  const matchingType = ['Training', 'Internship'].find(
+    (type) => type.toLowerCase() === requestedType?.toLowerCase(),
+  );
+  if (matchingType) {
+    applicationTypeInput.value = matchingType;
+  }
+  const requestedTrack = searchParams.get('track');
+  const matchingTrack = ['Data', 'Product', 'Software', 'Design'].find(
+    (track) => track.toLowerCase() === requestedTrack?.toLowerCase()
+      || requestedTrack?.toLowerCase().includes(track.toLowerCase()),
+  );
+  if (matchingTrack) {
+    form.elements.track.value = matchingTrack;
   }
 
   function updateApplicationType() {
-    const internship = typeSelect.value === 'Internship';
+    const internship = applicationTypeInput.value === 'Internship';
     internshipFields.hidden = !internship;
     cvInput.disabled = !internship;
     cvInput.required = internship;
@@ -28,6 +41,12 @@ if (form) {
     portfolioInput.required = internship;
     linkedinInput.disabled = !internship;
     linkedinInput.required = internship;
+    typeButtons.forEach((button) => {
+      const selected = button.dataset.applicationType === applicationTypeInput.value;
+      button.classList.toggle('btn-primary', selected);
+      button.classList.toggle('btn-outline-dark', !selected);
+      button.setAttribute('aria-pressed', String(selected));
+    });
   }
 
   function showError(element, message) {
@@ -35,7 +54,12 @@ if (form) {
     element.hidden = false;
   }
 
-  typeSelect.addEventListener('change', updateApplicationType);
+  typeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      applicationTypeInput.value = button.dataset.applicationType;
+      updateApplicationType();
+    });
+  });
   updateApplicationType();
 
   form.addEventListener('submit', async (event) => {

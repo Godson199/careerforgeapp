@@ -28,16 +28,14 @@
             <p class="cf-apply-intro">Tell us a little about yourself to get started.</p>
 
             <form id="cf-application-form" novalidate>
-                <div class="form-group">
-                    <label for="applicationType">Application type</label>
-                    <select class="form-control" id="applicationType" name="applicationType" required>
-                        <option value="Training">Training Applicant</option>
-                        <option value="Internship">Internship Applicant</option>
-                    </select>
+                <input id="applicationType" name="applicationType" type="hidden" value="Training">
+                <div class="btn-group w-100 mb-4" role="group" aria-label="Application type">
+                    <button class="btn btn-primary" type="button" data-application-type="Training" aria-pressed="true">Training Applicant</button>
+                    <button class="btn btn-outline-dark" type="button" data-application-type="Internship" aria-pressed="false">Internship Applicant</button>
                 </div>
                 <div class="form-group">
                     <label for="fullName">Full name</label>
-                    <input class="form-control" id="fullName" name="name" type="text" autocomplete="name" required>
+                    <input class="form-control" id="fullName" name="name" type="text" placeholder="Jane Doe" autocomplete="name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
@@ -47,13 +45,13 @@
                     <div class="form-group col-md-6">
                         <label for="country">Country</label>
                         <select class="form-control" id="country" name="country" required>
-                            <option>Nigeria</option>
-                            <option>Ghana</option>
-                            <option>Kenya</option>
-                            <option>South Africa</option>
-                            <option>United Kingdom</option>
-                            <option>United States</option>
-                            <option>Other</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
@@ -72,16 +70,16 @@
                             <option value="+44">+44 UK</option>
                             <option value="+1">+1 US/CA</option>
                         </select>
-                        <input class="form-control" id="phoneNumber" name="phoneNumber" type="tel" autocomplete="tel-national" required>
+                        <input class="form-control" id="phoneNumber" name="phoneNumber" type="tel" placeholder="801 234 5678" autocomplete="tel-national" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="track">Track</label>
                     <select class="form-control" id="track" name="track" required>
-                        <option>Data</option>
-                        <option>Product</option>
-                        <option>Software</option>
-                        <option>Design</option>
+                        <option value="Data">Data</option>
+                        <option value="Product">Product</option>
+                        <option value="Software">Software</option>
+                        <option value="Design">Design</option>
                     </select>
                 </div>
                 <div class="form-group">

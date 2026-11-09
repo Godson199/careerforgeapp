@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CareerForge application payment receipt.">
+    <title>Payment Receipt | CareerForge Analytics</title>
+    <link rel="shortcut icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/src/careerforge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="cf-apply-page">
+    <header class="cf-apply-header">
+        <a href="index.html" aria-label="CareerForge home">
+            <img src="/images/careerforge-logo.png" alt="CareerForge">
+        </a>
+        <a href="index.html" class="main-btn">Back to home</a>
+    </header>
+
+    <main class="cf-apply-main">
+        <section class="cf-apply-card" aria-labelledby="payment-title" aria-live="polite">
+            <div id="cf-payment-checking" class="text-center py-4">
+                <p class="mb-0">Confirming your payment&hellip;</p>
+            </div>
+            <div id="cf-payment-pending" class="text-center py-4" hidden>
+                <h1 class="h5 mb-3">Payment still processing.</h1>
+                <p class="mb-4">Paystack hasn&rsquo;t confirmed this transaction yet. You can refresh this page in a minute.</p>
+            </div>
+            <div id="cf-payment-failed" class="text-center py-4" hidden>
+                <h1 class="h5 mb-3">Payment could not be confirmed.</h1>
+                <p class="mb-4">If you were charged, please contact support with your payment reference. No payment is recorded until it is verified.</p>
+                <a href="apply.html" class="btn btn-outline-dark">Return to application</a>
+            </div>
+            <div id="cf-payment-success" class="text-center" hidden>
+                <p class="text-uppercase text-muted small mb-1 font-weight-bold" style="letter-spacing: .08em">CareerForge</p>
+                <h1 class="h5 mb-4">Application Payment Receipt</h1>
+                <div class="table-responsive">
+                    <table class="table table-borderless text-left mb-4">
+                        <tbody>
+                            <tr><td class="text-muted">Application ID</td><td id="receipt-application-id" class="text-right font-weight-bold"></td></tr>
+                            <tr><td class="text-muted">Applicant Name</td><td id="receipt-name" class="text-right font-weight-bold"></td></tr>
+                            <tr><td class="text-muted">Email</td><td id="receipt-email" class="text-right font-weight-bold"></td></tr>
+                            <tr><td class="text-muted">Amount Paid</td><td id="receipt-amount" class="text-right font-weight-bold"></td></tr>
+                            <tr><td class="text-muted">Payment Status</td><td class="text-right font-weight-bold text-success">Successful</td></tr>
+                            <tr><td class="text-muted">Payment Reference</td><td id="receipt-reference" class="text-right font-weight-bold"></td></tr>
+                            <tr><td class="text-muted">Payment Date</td><td id="receipt-date" class="text-right font-weight-bold"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mb-4">Your application has been successfully registered and your payment has been confirmed.</p>
+                <hr class="my-4">
+                <p class="mb-3">Your payment has been confirmed. You can now join the CareerForge classroom.</p>
+                <a id="cf-classroom-link" class="btn btn-primary" target="_blank" rel="noopener noreferrer" hidden>Join Google Classroom</a>
+                <p id="cf-classroom-unconfigured" class="text-muted small mb-0" hidden>Classroom link is not configured yet.</p>
+            </div>
+            <div id="cf-payment-error" class="alert alert-danger mt-3 mb-0" role="alert" hidden></div>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
