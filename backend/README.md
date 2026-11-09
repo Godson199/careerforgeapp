@@ -52,16 +52,15 @@ PostgreSQL `DATABASE_URL`.
 
 The repository includes a root-level `render.yaml` Blueprint. In Render,
 choose **New > Blueprint** and select this repository. It provisions the
-`careerforge-api` web service and a PostgreSQL database, then installs the
+`careerforge-new-api` web service and a PostgreSQL database, then installs the
 backend from `backend/`.
 
-After the Blueprint is created, set these prompted environment variables in
-the Render dashboard:
+After the Blueprint is created, set these environment variables in the
+Render dashboard:
 
-- `ALLOWED_ORIGINS`: your deployed frontend origin, such as
-  `https://careerforge.vercel.app`. Include the origin for the official
-  static site as well if it is hosted separately; list origins separated by
-  commas, with no trailing paths.
+- `ALLOWED_ORIGINS`: the Blueprint sets this to `*` so the separately hosted
+  official frontend can call the public API. If you restrict it, list every
+  frontend origin separated by commas.
 - `FRONTEND_URL`: the same frontend URL
 - `PAYSTACK_SECRET_KEY`: your Paystack secret key
 - `OPENAI_API_KEY`: your OpenRouter/OpenAI provider key
@@ -75,8 +74,8 @@ For a manual Render service, set the environment variables from `.env` in your R
   `JWT_SECRET`, `PAYSTACK_SECRET_KEY`, `FRONTEND_URL`, and
   `APPLICATION_FEE_KOBO`.
 2. Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-3. Make sure `ALLOWED_ORIGINS` includes your actual deployed frontend URL,
-   or the browser will block requests with a CORS error.
+3. If you restrict `ALLOWED_ORIGINS`, include your actual deployed frontend
+   origin(s), or the browser will block requests with a CORS error.
 
 **Uploaded résumés are stored on disk** in `app/uploads/resumes/`. On most
 hosts (including Render's free tier) this disk is **not persistent** —

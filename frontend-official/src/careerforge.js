@@ -1,10 +1,5 @@
 (function(){
   var $=function(s){return document.querySelector(s)};
-  document.querySelectorAll('a[data-cf-apply]').forEach(function(link){
-    var target=new URL(CF_APPLICATION_URL,window.location.href);
-    target.searchParams.set('type',link.getAttribute('data-cf-apply'));
-    link.href=target.toString();
-  });
   // chatbot
   var btn=$('#cf-chat-btn'),box=$('#cf-chat'),log=$('#cf-log'),f=$('#cf-chat form');
   if(btn){btn.onclick=function(){box.style.display=box.style.display==='block'?'none':'block'};
@@ -16,7 +11,7 @@
       fetch(CF_API_BASE+CF_ENDPOINTS.bot,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_id:sessionId,message:m})})
       .then(function(r){return r.json().then(function(d){if(!r.ok)throw new Error(d.detail||'Chat request failed');return d})})
       .then(function(d){add(d.reply||'The assistant did not return a response.')})
-      .catch(function(){add('I could not reach the server. Please try again shortly.')});};
+      .catch(function(error){add('I could not reach the CareerForge assistant: '+(error.message||'please try again shortly.'))});};
     function add(t){log.innerHTML+='<div class="cf-b"></div>';log.lastChild.textContent=t;log.scrollTop=log.scrollHeight}
     add("Hi, I'm the CareerForge assistant. Ask me about programmes, tracks or how to apply.");}
   // apply form
