@@ -2,11 +2,15 @@
   "rewrites": [
     {
       "source": "/apply",
-      "destination": "/apply.html"
+      "destination": "/index.html"
     },
     {
       "source": "/payment-success",
-      "destination": "/payment-success.html"
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

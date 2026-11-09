@@ -1,5 +1,0 @@
-import './careerforge.css'
-import './config.js'
-import './careerforge.js'
-import './apply.js'
-import './payment-success.js'
