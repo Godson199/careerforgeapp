@@ -107,7 +107,7 @@ export default function ApplyPage() {
             <>
               <h1 id="apply-title">Apply to CareerForge</h1>
               <p className="cf-apply-intro">Tell us a little about yourself to get started.</p>
-              <div className="btn-group w-100 mb-4" role="group" aria-label="Application type">
+              <div className="btn-group w-100 mb-3" role="group" aria-label="Application type">
                 {['Training', 'Internship'].map((type) => (
                   <button
                     className={`btn ${applicationType === type ? 'btn-primary' : 'btn-outline-dark'}`}
@@ -121,13 +121,15 @@ export default function ApplyPage() {
                 ))}
               </div>
               <form onSubmit={submitApplication}>
-                <div className="form-group">
-                  <label htmlFor="fullName">Full name</label>
-                  <input className="form-control" id="fullName" name="name" type="text" autoComplete="name" required />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="email">Email address</label>
-                  <input className="form-control" id="email" name="email" type="email" autoComplete="email" required />
+                <div className="form-row">
+                  <div className="form-group col-md-6">
+                    <label htmlFor="fullName">Full name</label>
+                    <input className="form-control" id="fullName" name="name" type="text" autoComplete="name" required />
+                  </div>
+                  <div className="form-group col-md-6">
+                    <label htmlFor="email">Email address</label>
+                    <input className="form-control" id="email" name="email" type="email" autoComplete="email" required />
+                  </div>
                 </div>
                 <div className="form-row">
                   <div className="form-group col-md-6">
@@ -147,25 +149,27 @@ export default function ApplyPage() {
                     <input className="form-control" id="state" name="state" autoComplete="address-level1" required />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="phoneNumber">Phone number</label>
-                  <div className="input-group">
-                    <select className="form-control cf-country-code" id="countryCode" name="countryCode" defaultValue="+234" aria-label="Country calling code" required>
-                      <option value="+234">+234 NG</option>
-                      <option value="+233">+233 GH</option>
-                      <option value="+254">+254 KE</option>
-                      <option value="+27">+27 ZA</option>
-                      <option value="+44">+44 UK</option>
-                      <option value="+1">+1 US/CA</option>
-                    </select>
-                    <input className="form-control" id="phoneNumber" name="phoneNumber" type="tel" autoComplete="tel-national" required />
+                <div className="form-row">
+                  <div className="form-group col-md-6">
+                    <label htmlFor="phoneNumber">Phone number</label>
+                    <div className="input-group">
+                      <select className="form-control cf-country-code" id="countryCode" name="countryCode" defaultValue="+234" aria-label="Country calling code" required>
+                        <option value="+234">+234 NG</option>
+                        <option value="+233">+233 GH</option>
+                        <option value="+254">+254 KE</option>
+                        <option value="+27">+27 ZA</option>
+                        <option value="+44">+44 UK</option>
+                        <option value="+1">+1 US/CA</option>
+                      </select>
+                      <input className="form-control" id="phoneNumber" name="phoneNumber" type="tel" autoComplete="tel-national" required />
+                    </div>
                   </div>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="track">Track</label>
-                  <select className="form-control" id="track" name="track" value={track} onChange={(event) => setTrack(event.target.value)} required>
-                    {tracks.map((item) => <option key={item} value={item}>{item}</option>)}
-                  </select>
+                  <div className="form-group col-md-6">
+                    <label htmlFor="track">Track</label>
+                    <select className="form-control" id="track" name="track" value={track} onChange={(event) => setTrack(event.target.value)} required>
+                      {tracks.map((item) => <option key={item} value={item}>{item}</option>)}
+                    </select>
+                  </div>
                 </div>
                 <div className="form-group">
                   <label htmlFor="hearAboutUs">How did you hear about us?</label>
@@ -185,13 +189,15 @@ export default function ApplyPage() {
                       <label htmlFor="cv">CV / Resume (PDF or Word document, up to 5MB)</label>
                       <input className="form-control" id="cv" name="cv" type="file" accept=".pdf,.doc,.docx" required />
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="portfolioUrl">GitHub / Portfolio URL</label>
-                      <input className="form-control" id="portfolioUrl" name="portfolioUrl" type="url" placeholder="https://" required />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="linkedinUrl">LinkedIn URL</label>
-                      <input className="form-control" id="linkedinUrl" name="linkedinUrl" type="url" placeholder="https://" required />
+                    <div className="form-row">
+                      <div className="form-group col-md-6">
+                        <label htmlFor="portfolioUrl">GitHub / Portfolio URL</label>
+                        <input className="form-control" id="portfolioUrl" name="portfolioUrl" type="url" placeholder="https://" required />
+                      </div>
+                      <div className="form-group col-md-6">
+                        <label htmlFor="linkedinUrl">LinkedIn URL</label>
+                        <input className="form-control" id="linkedinUrl" name="linkedinUrl" type="url" placeholder="https://" required />
+                      </div>
                     </div>
                   </fieldset>
                 )}
