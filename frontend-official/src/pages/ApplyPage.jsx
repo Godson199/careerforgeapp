@@ -79,9 +79,10 @@ export default function ApplyPage() {
   return (
     <div className="cf-apply-page">
       <header className="cf-apply-header">
-        <a href="/" aria-label="CareerForge home">
-          <img src="/images/careerforge-logo.png" alt="CareerForge" />
+        <a className="cf-apply-brand" href="/" aria-label="CareerForge home">
+          <img src="/images/logo.svg" alt="CareerForge Analytics" />
         </a>
+        <p className="cf-apply-support">Questions? Talk to us <strong>+234 913 737 3718</strong></p>
         <a href="/" className="main-btn">Back to home</a>
       </header>
       <main className="cf-apply-main">
