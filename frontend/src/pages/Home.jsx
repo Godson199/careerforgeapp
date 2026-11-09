@@ -125,66 +125,33 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="py-lg-13 py-8 bg-white position-relative" id="hero">
-        <div className="circle-bg d-none d-lg-block" />
-        <div className="container">
-          <div className="row align-items-center gy-8">
-            <div className="col-lg-7">
-              <span className="badge bg-primary bg-opacity-10 text-primary px-4 py-3 fw-normal border border-primary rounded-pill">
-                Career Acceleration Programme
-              </span>
-              <h1 className="display-4 fw-bold mt-4">
-                Careers aren&apos;t found.
-                <br />
-                They&apos;re <span className="text-primary">forged.</span>
-              </h1>
-              <p className="my-6 lead fw-normal">
-                Structured training, real job simulations, expert mentorship, live internship
-                projects, performance reviews, and one-on-one coaching — built to close the gap
-                between what you&apos;ve learned and what employers actually need.
-              </p>
-              <div className="d-flex flex-md-row flex-column justify-content-start gap-3">
-                <Link to="/apply" className="btn btn-primary">
-                  <span>Apply Now</span>
-                </Link>
-                <a href="#process" className="btn btn-outline-dark">
-                  <span>See How It Works</span>
-                </a>
-              </div>
-              <div className="d-flex gap-6 mt-8">
-                <div>
-                  <div className="fs-4 fw-bold text-primary">06</div>
-                  <small className="text-uppercase text-xs">Forge Stages</small>
-                </div>
-                <div>
-                  <div className="fs-4 fw-bold text-primary">1:1</div>
-                  <small className="text-uppercase text-xs">Mentor Pairing</small>
-                </div>
-                <div>
-                  <div className="fs-4 fw-bold text-primary">100%</div>
-                  <small className="text-uppercase text-xs">Real-World Projects</small>
-                </div>
-              </div>
+      <section className="hero-cover" id="hero" aria-label="CareerForge — your career, forged for the future">
+        <div className="hero-cover-canvas container">
+          <div className="hero-copy">
+            <span className="badge bg-primary bg-opacity-10 text-primary px-4 py-3 fw-normal border border-primary rounded-pill">
+              Career Acceleration Programme
+            </span>
+            <h1 className="display-4 fw-bold mt-4 mb-4">
+              Careers aren&apos;t found.
+              <br />
+              They&apos;re <span className="text-primary">forged.</span>
+            </h1>
+            <p className="lead mb-5">
+              Structured training, real job simulations, expert mentorship, live internship
+              projects, performance reviews, and one-on-one coaching — built to close the gap
+              between what you&apos;ve learned and what employers actually need.
+            </p>
+            <div className="d-flex flex-sm-row flex-column gap-3">
+              <Link to="/apply" className="btn btn-primary">Apply Now</Link>
+              <a href="#process" className="btn btn-outline-dark">See How It Works</a>
             </div>
-            <div className="col-lg-5 mx-auto">
-              <div className="card p-3 rounded-5 shadow-sm">
-                <div className="position-relative">
-                  <img src={heroImage} alt="CareerForge participant working on a laptop" className="rounded-5 hero-photo" />
-                  <div className="position-absolute bottom-0 start-0 ms-n8 mb-n8 d-none d-lg-block">
-                    <div className="bg-white shadow-sm rounded-pill d-flex align-items-center gap-2 px-3 py-2 border" style={{ width: 180 }}>
-                      <div className="icon-shape icon-md rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center fw-bold">
-                        6
-                      </div>
-                      <div className="d-flex flex-column text-xs lh-sm">
-                        <span className="fw-bold">Forge Stages</span>
-                        <span>One Transformation</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="hero-stats d-flex gap-5 mt-5">
+              <div><strong>06</strong><small>Forge Stages</small></div>
+              <div><strong>1:1</strong><small>Mentor Pairing</small></div>
+              <div><strong>100%</strong><small>Real-World Projects</small></div>
             </div>
           </div>
+          <img src={heroImage} alt="CareerForge participant working on a laptop" className="hero-cover-image" />
         </div>
       </section>
 

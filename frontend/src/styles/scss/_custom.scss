@@ -31,10 +31,77 @@ h1, h2, h3, h4, h5, h6,
 .text-ink { color: $gray-950 !important; }
 .bg-ink { background-color: $gray-950 !important; }
 
-.hero-photo {
+.hero-cover {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.hero-cover-canvas {
+  position: relative;
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 47% 53%;
+  align-items: center;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-copy .lead {
+  max-width: 620px;
+}
+
+.hero-stats strong,
+.hero-stats small {
+  display: block;
+}
+
+.hero-stats strong {
+  color: $primary;
+  font-size: 1.35rem;
+}
+
+.hero-stats small {
+  color: $gray-700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.hero-cover-image {
+  position: absolute;
+  z-index: 1;
+  right: -4%;
+  bottom: 0;
+  width: 62%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+@media (max-width: 991.98px) {
+  .hero-cover,
+  .hero-cover-canvas {
+    min-height: 0;
+  }
+
+  .hero-cover-canvas {
+    grid-template-columns: 1fr;
+    padding-top: 4rem;
+  }
+
+  .hero-cover-image {
+    position: relative;
+    right: auto;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
 }
 
 .section-photo {

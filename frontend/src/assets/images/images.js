@@ -4,7 +4,7 @@
 // just replace the URL.
 
 // CareerForge hero artwork supplied for the homepage.
-import careerforgeHero from './careerforge-hero.png';
+import careerforgeHero from './careerforge-hero-cutout.png';
 
 export const heroImage = careerforgeHero;
 

@@ -1,0 +1,43 @@
+:root{--ink:#0d0d0f;--ink2:#1d1d21;--ember:#ff6a13;--ember-d:#d9520a;--paper:#faf6ef;--mute:#6b6b73}
+body,p,li,a,input,textarea,select{font-family:'Inter',Arial,sans-serif}
+h1,h2,h3,h4,h5,.main-btn,.cf-h{font-family:'Archivo',Arial,sans-serif}
+.main-btn,.main-btn:hover{color:#fff}.main-btn:hover{background:var(--ink)}
+.header-top,.header-opening-time{background:var(--ink)}
+.logo img{height:46px;width:auto}
+.navigation{background:var(--ink)}
+.navigation .navbar-nav>li>a{color:#fff}.navigation .navbar-nav>li>a:hover,.navigation .navbar-nav>li>a.active{color:var(--ember)}
+.preloader{background:var(--ink)}
+#cf-chat-btn{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:var(--ember);color:#fff;border:0;font-size:24px;z-index:9999;box-shadow:0 8px 20px rgba(0,0,0,.3);cursor:pointer}
+#cf-chat{position:fixed;right:22px;bottom:92px;width:340px;max-width:calc(100vw - 30px);background:#fff;z-index:9999;display:none;box-shadow:0 14px 40px rgba(0,0,0,.3);border-top:4px solid var(--ember)}
+#cf-chat header{background:var(--ink);color:#fff;padding:12px 16px;font-weight:700}
+#cf-log{height:280px;overflow:auto;padding:12px;background:var(--paper);font-size:14px}
+#cf-log div{margin-bottom:8px;padding:8px 10px;max-width:85%}.cf-u{background:var(--ember);color:#fff;margin-left:auto}.cf-b{background:#fff;border:1px solid #e8e2d6}
+#cf-chat form{display:flex}#cf-chat input{flex:1;border:0;padding:12px;border-top:1px solid #eee}#cf-chat button{border:0;background:var(--ink);color:#fff;padding:0 16px}
+.navigation .navbar-nav>li>a:hover,.navigation .navbar-nav>li>a.active{color:var(--ember)}
+#footer-part,.footer-top{background:var(--ink)}
+@media(max-width:767px){#cf-chat{width:calc(100vw - 30px)}}
+
+/* NAV: always visible, white text */
+.navigation,.navigation.sticky{background:var(--ink)!important}
+.navigation .navbar .navbar-nav>li>a{color:#fff!important}
+.navigation .navbar .navbar-nav>li>a.active,.navigation .navbar .navbar-nav>li>a:hover{color:var(--ember)!important}
+.navigation .right-icon ul li a,.navigation .right-icon ul li a i{color:#fff!important}
+.navbar-toggler .icon-bar{background:#fff!important}
+/* What You Get: single row, dark */
+.cf-dark{background:var(--ink)}
+.cf-dark .feature-title h3{color:#fff;font-size:34px;padding-bottom:40px}
+.cf-get{text-align:center;padding:0 15px}
+.cf-get .icon img{height:64px;width:auto;filter:brightness(0) invert(1);margin-bottom:18px}
+.cf-get h4{color:#fff;font-size:22px;padding-bottom:12px}
+.cf-get p{color:#c9c9d0}
+@media(max-width:767px){.cf-get{margin-bottom:30px}}
+
+.cf-program-row{display:flex;flex-wrap:wrap}
+.cf-program-row>div{margin-bottom:30px}
+.cf-program-row .singel-course{height:100%}
+.cf-program-row .singel-course .cont h4{font-size:20px;padding-bottom:12px}
+.cf-program-description{font-size:14px;line-height:1.6;color:var(--mute);margin:0}
+.about-event.cf-event-background{background:linear-gradient(rgba(13,13,15,.76),rgba(13,13,15,.84)),url('/images/upcoming-events-bg.jpg') center/cover no-repeat}
+.about-event.cf-event-background .event-title h3,.about-event.cf-event-background ul li .singel-event a h4{color:#fff}
+.about-event.cf-event-background ul li .singel-event span{color:#e2e2e6}
+.about-event.cf-event-background ul li .singel-event{border-bottom-color:rgba(255,255,255,.2)}
