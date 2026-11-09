@@ -15,6 +15,14 @@ export default function Apply() {
   const [startingPayment, setStartingPayment] = useState(false);
 
   useEffect(() => {
+    const type = searchParams.get('type') || searchParams.get('applicationType');
+    if (type) {
+      const match = ['Training', 'Internship'].find(
+        (value) => value.toLowerCase() === type.toLowerCase()
+      );
+      if (match) setApplicationType(match);
+    }
+
     const pre = searchParams.get('track');
     if (pre) {
       const match = TRACKS.find(

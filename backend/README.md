@@ -59,7 +59,9 @@ After the Blueprint is created, set these prompted environment variables in
 the Render dashboard:
 
 - `ALLOWED_ORIGINS`: your deployed frontend origin, such as
-  `https://careerforge.vercel.app`
+  `https://careerforge.vercel.app`. Include the origin for the official
+  static site as well if it is hosted separately; list origins separated by
+  commas, with no trailing paths.
 - `FRONTEND_URL`: the same frontend URL
 - `PAYSTACK_SECRET_KEY`: your Paystack secret key
 - `OPENAI_API_KEY`: your OpenRouter/OpenAI provider key
@@ -108,7 +110,10 @@ The grounded RAG chatbot is available at `POST /api/bot/chat`. It accepts a
 JSON payload with `message` and `session_id`, retrieves relevant content from
 `data/faq.md` and other ingested sources, and returns a `reply`. Set
 `OPENAI_API_KEY` (or `API_KEY`), then run the ingestion script to populate the
-knowledge table before using the widget.
+knowledge table before using the widget. The frontend-official site sends
+the same session-aware payload and links its Apply buttons to the React
+frontend's `/apply` page, where applications and Paystack payments use the
+API routes documented above.
 
 ## Creating your first admin user
 

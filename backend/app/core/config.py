@@ -15,9 +15,16 @@ class Settings:
     JWT_EXPIRE_MINUTES: int = int(os.getenv("JWT_EXPIRE_MINUTES", "1440"))
 
     # Comma-separated list of allowed frontend origins, e.g.:
-    # "https://your-frontend.vercel.app,http://localhost:3000"
+    # "https://careerforge.vercel.app,https://your-official-site.vercel.app"
+    _default_origins = (
+        "http://localhost:3000,http://127.0.0.1:3000,"
+        "http://localhost:5173,http://127.0.0.1:5173,"
+        "https://careerforge.vercel.app"
+    )
     ALLOWED_ORIGINS: list[str] = [
-        o.strip() for o in os.getenv("ALLOWED_ORIGINS", "*").split(",") if o.strip()
+        o.strip()
+        for o in os.getenv("ALLOWED_ORIGINS", _default_origins).split(",")
+        if o.strip()
     ]
 
     PAYSTACK_SECRET_KEY: str = os.getenv("PAYSTACK_SECRET_KEY", "")
