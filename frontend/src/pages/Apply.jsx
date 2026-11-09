@@ -89,12 +89,12 @@ export default function Apply() {
   }
 
   return (
-    <section className="py-lg-13 py-8 bg-light bg-opacity-25 min-vh-100">
+    <section className="py-lg-7 py-5 bg-light bg-opacity-25 min-vh-100">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-8">
             <div className="card rounded-5 shadow-sm">
-              <div className="card-body p-6">
+              <div className="card-body p-4">
                 {submittedApplication ? (
                   <div className="text-center py-4">
                     <h1 className="h5 mb-3">Application submitted successfully.</h1>
@@ -114,9 +114,9 @@ export default function Apply() {
                   </div>
                 ) : (
                   <>
-                    <h1 className="card-title mb-4 h5">Apply to CareerForge</h1>
+                    <h1 className="card-title mb-3 h5">Apply to CareerForge</h1>
 
-                    <div className="btn-group w-100 mb-5" role="group" aria-label="Application type">
+                    <div className="btn-group w-100 mb-3" role="group" aria-label="Application type">
                       <button
                         type="button"
                         className={`btn ${applicationType === 'Training' ? 'btn-primary' : 'btn-outline-dark'}`}
@@ -134,19 +134,20 @@ export default function Apply() {
                     </div>
 
                     <form className={validated ? 'was-validated' : ''} noValidate onSubmit={handleSubmit}>
-                      <div className="mb-3">
-                        <label htmlFor="fullName" className="form-label">Full name</label>
-                        <input id="fullName" name="name" type="text" className="form-control" placeholder="Jane Doe" required />
-                        <div className="invalid-feedback">Please enter your name.</div>
+                      <div className="row g-2 mb-2">
+                        <div className="col-md-6">
+                          <label htmlFor="fullName" className="form-label">Full name</label>
+                          <input id="fullName" name="name" type="text" className="form-control" placeholder="Jane Doe" required />
+                          <div className="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div className="col-md-6">
+                          <label htmlFor="email" className="form-label">Email address</label>
+                          <input id="email" name="email" type="email" className="form-control" placeholder="name@example.com" required />
+                          <div className="invalid-feedback">Please enter a valid email.</div>
+                        </div>
                       </div>
 
-                      <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Email address</label>
-                        <input id="email" name="email" type="email" className="form-control" placeholder="name@example.com" required />
-                        <div className="invalid-feedback">Please enter a valid email.</div>
-                      </div>
-
-                      <div className="row g-3 mb-3">
+                      <div className="row g-2 mb-2">
                         <div className="col-md-6">
                           <label htmlFor="country" className="form-label">Country</label>
                           <select id="country" name="country" className="form-select" defaultValue="Nigeria" required>
@@ -167,38 +168,39 @@ export default function Apply() {
                         </div>
                       </div>
 
-                      <div className="mb-3">
-                        <label htmlFor="phoneNumber" className="form-label">Phone number</label>
-                        <div className="input-group">
-                          <select id="countryCode" name="countryCode" className="form-select flex-grow-0" style={{ width: '125px' }} defaultValue="+234" aria-label="Country calling code" required>
-                            <option value="+234">+234 NG</option>
-                            <option value="+233">+233 GH</option>
-                            <option value="+254">+254 KE</option>
-                            <option value="+27">+27 ZA</option>
-                            <option value="+44">+44 UK</option>
-                            <option value="+1">+1 US/CA</option>
-                          </select>
-                          <input id="phoneNumber" name="phoneNumber" type="tel" className="form-control" placeholder="801 234 5678" required />
+                      <div className="row g-2 mb-2">
+                        <div className="col-md-6">
+                          <label htmlFor="phoneNumber" className="form-label">Phone number</label>
+                          <div className="input-group">
+                            <select id="countryCode" name="countryCode" className="form-select flex-grow-0" style={{ width: '100px' }} defaultValue="+234" aria-label="Country calling code" required>
+                              <option value="+234">+234 NG</option>
+                              <option value="+233">+233 GH</option>
+                              <option value="+254">+254 KE</option>
+                              <option value="+27">+27 ZA</option>
+                              <option value="+44">+44 UK</option>
+                              <option value="+1">+1 US/CA</option>
+                            </select>
+                            <input id="phoneNumber" name="phoneNumber" type="tel" className="form-control" placeholder="801 234 5678" required />
+                          </div>
+                          <div className="invalid-feedback">Please enter your phone number.</div>
                         </div>
-                        <div className="invalid-feedback">Please enter your phone number.</div>
+                        <div className="col-md-6">
+                          <label htmlFor="track" className="form-label">Track</label>
+                          <select
+                            id="track"
+                            name="track"
+                            className="form-select"
+                            value={track}
+                            onChange={(e) => setTrack(e.target.value)}
+                          >
+                            {TRACKS.map((t) => (
+                              <option key={t} value={t}>{t}</option>
+                            ))}
+                          </select>
+                        </div>
                       </div>
 
-                      <div className="mb-3">
-                        <label htmlFor="track" className="form-label">Track</label>
-                        <select
-                          id="track"
-                          name="track"
-                          className="form-select"
-                          value={track}
-                          onChange={(e) => setTrack(e.target.value)}
-                        >
-                          {TRACKS.map((t) => (
-                            <option key={t} value={t}>{t}</option>
-                          ))}
-                        </select>
-                      </div>
-
-                      <div className="mb-3">
+                      <div className="mb-2">
                         <label htmlFor="hearAboutUs" className="form-label">How did you hear about us?</label>
                         <select id="hearAboutUs" name="hearAboutUs" className="form-select" defaultValue="" required>
                           <option value="" disabled>Select an option</option>
@@ -216,7 +218,7 @@ export default function Apply() {
                           <hr className="my-4" />
                           <p className="text-uppercase text-xs text-muted mb-3">Internship Requirements</p>
 
-                          <div className="mb-3">
+                          <div className="mb-2">
                             <label htmlFor="cvFile" className="form-label">CV / Resume (PDF or Word doc)</label>
                             <input
                               id="cvFile"
@@ -230,21 +232,22 @@ export default function Apply() {
                             <div className="form-text">PDF or Word doc, up to 5MB.</div>
                           </div>
 
-                          <div className="mb-3">
-                            <label htmlFor="portfolioUrl" className="form-label">GitHub / Portfolio URL</label>
-                            <input id="portfolioUrl" name="portfolioUrl" type="url" className="form-control" placeholder="https://" required />
-                            <div className="invalid-feedback">A GitHub or portfolio link is required.</div>
-                          </div>
-
-                          <div className="mb-3">
-                            <label htmlFor="linkedinUrl" className="form-label">LinkedIn URL</label>
-                            <input id="linkedinUrl" name="linkedinUrl" type="url" className="form-control" placeholder="https://" required />
-                            <div className="invalid-feedback">A LinkedIn link is required.</div>
+                          <div className="row g-2 mb-2">
+                            <div className="col-md-6">
+                              <label htmlFor="portfolioUrl" className="form-label">GitHub / Portfolio URL</label>
+                              <input id="portfolioUrl" name="portfolioUrl" type="url" className="form-control" placeholder="https://" required />
+                              <div className="invalid-feedback">A GitHub or portfolio link is required.</div>
+                            </div>
+                            <div className="col-md-6">
+                              <label htmlFor="linkedinUrl" className="form-label">LinkedIn URL</label>
+                              <input id="linkedinUrl" name="linkedinUrl" type="url" className="form-control" placeholder="https://" required />
+                              <div className="invalid-feedback">A LinkedIn link is required.</div>
+                            </div>
                           </div>
                         </>
                       )}
 
-                      <div className="mb-3 form-check">
+                      <div className="mb-2 form-check">
                         <input id="terms" className="form-check-input" type="checkbox" required />
                         <label className="form-check-label small" htmlFor="terms">
                           I agree to the <a href="#" className="text-decoration-none">terms and privacy</a>
