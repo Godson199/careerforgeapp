@@ -78,12 +78,52 @@ export default function ApplyPage() {
 
   return (
     <div className="cf-apply-page">
-      <header className="cf-apply-header">
-        <a className="cf-apply-brand" href="/" aria-label="CareerForge home">
-          <img src="/images/logo.svg" alt="CareerForge Analytics" />
-        </a>
-        <p className="cf-apply-support">Questions? Talk to us <strong>+234 913 737 3718</strong></p>
-        <a href="/" className="main-btn">Back to home</a>
+      <header className="cf-apply-site-header">
+        <div className="cf-apply-contact-bar">
+          <div className="cf-apply-header-container">
+            <div className="cf-apply-contact-details">
+              <span><img src="/images/all-icon/map.png" alt="" />Nigeria, Remote, World wide</span>
+              <a href="mailto:careerforgeanalytics@gmail.com">
+                <img src="/images/all-icon/email.png" alt="" />careerforgeanalytics@gmail.com
+              </a>
+            </div>
+            <p>Live sessions : Monday, Wednesday &amp; Friday</p>
+          </div>
+        </div>
+        <div className="cf-apply-brand-row">
+          <div className="cf-apply-header-container">
+            <a className="cf-apply-brand" href="/" aria-label="CareerForge home">
+              <img src="/images/careerforge-logo.png" alt="CareerForge" />
+            </a>
+            <div className="cf-apply-header-actions">
+              <div className="cf-apply-support">
+                <img src="/images/all-icon/support.png" alt="" />
+                <div>
+                  <span>Questions? Talk to us</span>
+                  <strong>+2349137373718</strong>
+                </div>
+              </div>
+              <a href="/apply?type=Training" className="cf-apply-now">Apply Now</a>
+            </div>
+          </div>
+        </div>
+        <nav className="cf-apply-navigation" aria-label="Main navigation">
+          <div className="cf-apply-header-container">
+            <ul>
+              <li><a className="active" href="/">Home</a></li>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/courses.html">Programmes</a></li>
+              <li><a href="/events.html">Events</a></li>
+              <li><a href="/teachers.html">Our Mentors</a></li>
+              <li><a href="/blog.html">Blog</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <div className="cf-apply-nav-icons">
+              <a href="/courses.html" aria-label="Search programmes"><i className="fa fa-search" /></a>
+              <a href="#" aria-label="Shopping bag"><i className="fa fa-shopping-bag" /><span>0</span></a>
+            </div>
+          </div>
+        </nav>
       </header>
       <main className="cf-apply-main">
         <section className="cf-apply-card" aria-labelledby="apply-title">
