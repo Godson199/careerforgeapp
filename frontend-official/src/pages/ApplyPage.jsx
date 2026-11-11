@@ -78,52 +78,124 @@ export default function ApplyPage() {
 
   return (
     <div className="cf-apply-page">
-      <header className="cf-apply-site-header">
-        <div className="cf-apply-contact-bar">
-          <div className="cf-apply-header-container">
-            <div className="cf-apply-contact-details">
-              <span><img src="/images/all-icon/map.png" alt="" />Nigeria, Remote, World wide</span>
-              <a href="mailto:careerforgeanalytics@gmail.com">
-                <img src="/images/all-icon/email.png" alt="" />careerforgeanalytics@gmail.com
-              </a>
-            </div>
-            <p>Live sessions : Monday, Wednesday &amp; Friday</p>
-          </div>
-        </div>
-        <div className="cf-apply-brand-row">
-          <div className="cf-apply-header-container">
-            <a className="cf-apply-brand" href="/" aria-label="CareerForge home">
-              <img src="/images/careerforge-logo.png" alt="CareerForge" />
-            </a>
-            <div className="cf-apply-header-actions">
-              <div className="cf-apply-support">
-                <img src="/images/all-icon/support.png" alt="" />
-                <div>
-                  <span>Questions? Talk to us</span>
-                  <strong>+2349137373718</strong>
+      <header id="header-part">
+        <div className="header-top d-none d-lg-block">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="header-contact text-lg-left text-center">
+                  <ul>
+                    <li><img src="/images/all-icon/map.png" alt="icon" /><span>Nigeria, Remote, World wide</span></li>
+                    <li><img src="/images/all-icon/email.png" alt="icon" /><span>careerforgeanalytics@gmail.com</span></li>
+                  </ul>
                 </div>
               </div>
-              <a href="/apply?type=Training" className="cf-apply-now">Apply Now</a>
+              <div className="col-lg-6">
+                <div className="header-opening-time text-lg-right text-center">
+                  <p>Live sessions : Monday, Wednesday &amp; Friday</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <nav className="cf-apply-navigation" aria-label="Main navigation">
-          <div className="cf-apply-header-container">
-            <ul>
-              <li><a className="active" href="/">Home</a></li>
-              <li><a href="/about.html">About Us</a></li>
-              <li><a href="/courses.html">Programmes</a></li>
-              <li><a href="/events.html">Events</a></li>
-              <li><a href="/teachers.html">Our Mentors</a></li>
-              <li><a href="/blog.html">Blog</a></li>
-              <li><a href="/contact.html">Contact</a></li>
-            </ul>
-            <div className="cf-apply-nav-icons">
-              <a href="/courses.html" aria-label="Search programmes"><i className="fa fa-search" /></a>
-              <a href="#" aria-label="Shopping bag"><i className="fa fa-shopping-bag" /><span>0</span></a>
+        <div className="header-logo-support pt-30 pb-30">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-4 col-md-4">
+                <div className="logo">
+                  <a href="/" aria-label="CareerForge home">
+                    <img src="/images/careerforge-logo.png" alt="CareerForge" />
+                  </a>
+                </div>
+              </div>
+              <div className="col-lg-8 col-md-8">
+                <div className="support-button float-right d-none d-md-block">
+                  <div className="support float-left">
+                    <div className="icon"><img src="/images/all-icon/support.png" alt="icon" /></div>
+                    <div className="cont">
+                      <p>Questions? Talk to us</p>
+                      <span>+2349137373718</span>
+                    </div>
+                  </div>
+                  <div className="button float-left">
+                    <a href="/apply?type=Training" className="main-btn">Apply Now</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </nav>
+        </div>
+        <div className="navigation">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-10 col-md-10 col-sm-9 col-8">
+                <nav className="navbar navbar-expand-lg">
+                  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="icon-bar" />
+                    <span className="icon-bar" />
+                    <span className="icon-bar" />
+                  </button>
+                  <div className="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                      <li className="nav-item">
+                        <a className="active" href="/">Home</a>
+                        <ul className="sub-menu">
+                          <li><a className="active" href="/">Home 01</a></li>
+                          <li><a href="/">Home 02</a></li>
+                          <li><a href="/">Home 03</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item"><a href="/about.html">About us</a></li>
+                      <li className="nav-item">
+                        <a href="/courses.html">Programmes</a>
+                        <ul className="sub-menu">
+                          <li><a href="/courses.html">Programmes</a></li>
+                          <li><a href="/courses-singel.html">Programme Details</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item">
+                        <a href="/events.html">Events</a>
+                        <ul className="sub-menu">
+                          <li><a href="/events.html">Events</a></li>
+                          <li><a href="/events-singel.html">Event Details</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item">
+                        <a href="/teachers.html">Our Mentors</a>
+                        <ul className="sub-menu">
+                          <li><a href="/teachers.html">Mentors</a></li>
+                          <li><a href="/teachers-singel.html">Mentor Profile</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item">
+                        <a href="/blog.html">Blog</a>
+                        <ul className="sub-menu">
+                          <li><a href="/blog.html">Blog</a></li>
+                          <li><a href="/blog-singel.html">Blog Details</a></li>
+                        </ul>
+                      </li>
+                      <li className="nav-item">
+                        <a href="/contact.html">Contact</a>
+                        <ul className="sub-menu">
+                          <li><a href="/contact.html">Contact Us</a></li>
+                          <li><a href="/contact-2.html">Contact Us 2</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+              <div className="col-lg-2 col-md-2 col-sm-3 col-4">
+                <div className="right-icon text-right">
+                  <ul>
+                    <li><a href="/courses.html" aria-label="Search programmes"><i className="fa fa-search" /></a></li>
+                    <li><a href="#" aria-label="Shopping bag"><i className="fa fa-shopping-bag" /><span>0</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       <main className="cf-apply-main">
         <section className="cf-apply-card" aria-labelledby="apply-title">
