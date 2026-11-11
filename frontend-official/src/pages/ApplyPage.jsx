@@ -161,10 +161,10 @@ export default function ApplyPage() {
                         </ul>
                       </li>
                       <li className="nav-item">
-                        <a href="/teachers.html">Our Mentors</a>
+                        <a href="/teachers.html">Our Facilitators</a>
                         <ul className="sub-menu">
-                          <li><a href="/teachers.html">Mentors</a></li>
-                          <li><a href="/teachers-singel.html">Mentor Profile</a></li>
+                          <li><a href="/teachers.html">Facilitators</a></li>
+                          <li><a href="/teachers-singel.html">Facilitator Profile</a></li>
                         </ul>
                       </li>
                       <li className="nav-item">
@@ -338,7 +338,7 @@ export default function ApplyPage() {
                       <img src="/images/careerforge-logo-light.png" alt="CareerForge" />
                     </a>
                   </div>
-                  <p>Real job simulations, expert mentors and live projects that turn learning into employment.</p>
+                  <p>Real job simulations, expert facilitators and live projects that turn learning into employment.</p>
                   <ul className="mt-20">
                     <li><a href="#" aria-label="Facebook"><i className="fa fa-facebook-f" /></a></li>
                     <li><a href="#" aria-label="Twitter"><i className="fa fa-twitter" /></a></li>
@@ -360,7 +360,7 @@ export default function ApplyPage() {
                   <ul>
                     <li><a href="#"><i className="fa fa-angle-right" />Gallery</a></li>
                     <li><a href="#"><i className="fa fa-angle-right" />Merch</a></li>
-                    <li><a href="/teachers.html"><i className="fa fa-angle-right" />Mentors</a></li>
+                    <li><a href="/teachers.html"><i className="fa fa-angle-right" />Facilitators</a></li>
                     <li><a href="#"><i className="fa fa-angle-right" />Support</a></li>
                     <li><a href="/contact.html"><i className="fa fa-angle-right" />Contact</a></li>
                   </ul>
