@@ -109,14 +109,14 @@ h1,h2,h3,h4,h5,.main-btn,.cf-h{font-family:'Archivo',Arial,sans-serif}
 #about-part{scroll-margin-top:24px}
 #course-part{scroll-margin-top:24px}
 #about-part .about-cont h4{margin:18px 0 0;font-size:19px;line-height:1.25}
-#about-part .cf-welcome-more{margin-top:24px}
-#about-part .cf-welcome-more summary{display:inline-block;margin:0;padding:12px 30px;border:0;cursor:pointer;list-style:none}
+#about-part .cf-welcome-more{margin-top:8px}
+#about-part .cf-welcome-more summary{display:inline-block;margin:16px 0 0;padding:12px 30px;border:0;cursor:pointer;list-style:none}
 #about-part .cf-welcome-more summary::-webkit-details-marker{display:none}
 #about-part .cf-welcome-more summary::marker{display:none;content:""}
 #about-part .cf-welcome-more summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 #about-part .cf-welcome-more-close,#about-part .cf-welcome-more[open] .cf-welcome-more-open{display:none}
 #about-part .cf-welcome-more[open] .cf-welcome-more-close{display:inline}
-#about-part .cf-welcome-more-content{padding-top:12px}
+#about-part .cf-welcome-more-content{padding-top:0}
 #about-part .cf-welcome-more-content p{padding-top:8px;line-height:1.65}
 .about-event.cf-event-background{background:linear-gradient(rgba(13,13,15,.76),rgba(13,13,15,.84)),url('/images/upcoming-events-bg.jpg') center/cover no-repeat}
 .about-event.cf-event-background .event-title h3,.about-event.cf-event-background ul li .singel-event a h4{color:#fff}
