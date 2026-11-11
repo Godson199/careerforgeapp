@@ -76,6 +76,8 @@ h1,h2,h3,h4,h5,.main-btn,.cf-h{font-family:'Archivo',Arial,sans-serif}
 #courses-grid .singel-course .thum .image img,
 #courses-list .singel-course .thum .image img{width:100%;height:100%;object-fit:cover}
 .cf-course-art-wide img{object-fit:contain!important}
+#courses-grid .singel-course .course-teacher,
+#courses-list .singel-course .course-teacher{display:none}
 .about-event.cf-event-background{background:linear-gradient(rgba(13,13,15,.76),rgba(13,13,15,.84)),url('/images/upcoming-events-bg.jpg') center/cover no-repeat}
 .about-event.cf-event-background .event-title h3,.about-event.cf-event-background ul li .singel-event a h4{color:#fff}
 .about-event.cf-event-background ul li .singel-event span{color:#e2e2e6}
