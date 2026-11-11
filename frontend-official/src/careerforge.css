@@ -42,6 +42,23 @@ h1,h2,h3,h4,h5,.main-btn,.cf-h{font-family:'Archivo',Arial,sans-serif}
 .cf-apply-card [hidden]{display:none!important}
 .cf-country-code{max-width:130px}
 .cf-apply-submit{width:100%;border:0}
+.cf-apply-page #header-part .navigation .navbar-toggler{display:none!important}
+.cf-apply-page #header-part .navigation .navbar-collapse{display:flex!important;flex-basis:auto}
+.cf-apply-page #header-part .navigation .navbar-nav{display:flex;flex-direction:row;flex-wrap:wrap;gap:0 22px}
+.cf-apply-page #header-part .navigation .navbar-nav>li{margin-right:0}
+.cf-apply-page #header-part .navigation .navbar-nav>li>a{padding:18px 0}
+@media(max-width:991.98px){
+  .cf-apply-page #header-part .navigation .navbar-collapse{display:flex!important}
+  .cf-apply-page #header-part .navigation .navbar-nav{flex-direction:row;flex-wrap:wrap}
+  .cf-apply-page #header-part .navigation .navbar-nav .sub-menu{display:none!important}
+}
+@media(max-width:767px){
+  .cf-apply-page #header-part .navigation .navbar-nav{gap:0 14px}
+  .cf-apply-page #header-part .navigation .navbar-nav>li>a{padding:10px 0;font-size:12px}
+  .cf-apply-page #header-part .navigation .right-icon ul{margin:0}
+  .cf-apply-page #header-part .navigation .right-icon ul li{margin:0 0 0 10px}
+  .cf-apply-page #header-part .navigation .right-icon ul li a{font-size:17px}
+}
 @media(max-width:575px){.cf-apply-main{padding:24px 12px}.cf-apply-card{padding:20px 16px}}
 
 /* NAV: always visible, white text */
