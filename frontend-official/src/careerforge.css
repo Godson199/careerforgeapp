@@ -110,3 +110,29 @@ h1,h2,h3,h4,h5,.main-btn,.cf-h{font-family:'Archivo',Arial,sans-serif}
 .about-event.cf-event-background .event-title h3,.about-event.cf-event-background ul li .singel-event a h4{color:#fff}
 .about-event.cf-event-background ul li .singel-event span{color:#e2e2e6}
 .about-event.cf-event-background ul li .singel-event{border-bottom-color:rgba(255,255,255,.2)}
+#slider-part .single-slider{background-position:center;background-size:cover}
+#slider-part .slider-cont{max-width:740px}
+#slider-part .slider-cont h1{font-family:'Archivo',Arial,sans-serif;font-size:clamp(42px,5vw,64px);line-height:1.08}
+#slider-part .slider-cont p{max-width:680px;padding-bottom:30px;line-height:1.65}
+.cf-hero-kicker{display:inline-block;margin-bottom:18px;color:#ff8a43;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.cf-hero-stats{display:flex;flex-wrap:wrap;gap:28px;margin-top:12px}
+.cf-hero-stats>div{display:flex;flex-direction:column;gap:3px}
+.cf-hero-stats strong{color:#fff;font-family:'Archivo',Arial,sans-serif;font-size:26px;line-height:1}
+.cf-hero-stats span{color:#e2e2e6;font-size:12px;font-weight:600}
+.cf-gap-item{margin-top:22px}
+.cf-gap-item h4,.cf-forge-process h4{margin-bottom:8px;color:var(--ink);font-size:18px;font-weight:700}
+.cf-gap-item p,.cf-forge-process p{margin:0;padding-top:0;line-height:1.7}
+.cf-forge-process{margin-top:26px;padding:20px 22px;border-left:3px solid var(--ember);background:#f5eee5}
+.cf-forge-process>span{display:block;margin-bottom:7px;color:var(--ember-d);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.cf-welcome-visual{position:relative;overflow:hidden;min-height:520px;border-radius:8px;background:var(--ink)}
+.cf-welcome-visual>img{display:block;width:100%;height:520px;object-fit:cover}
+.cf-welcome-badge{position:absolute;right:20px;bottom:20px;display:flex;min-width:170px;flex-direction:column;padding:18px 22px;background:var(--ink);color:#fff}
+.cf-welcome-badge strong{color:#ff8a43;font-family:'Archivo',Arial,sans-serif;font-size:38px;line-height:1}
+.cf-welcome-badge span{margin-top:6px;font-weight:700}
+.cf-welcome-badge small{margin-top:3px;color:#c9c9d0}
+@media(max-width:767px){
+  #slider-part .slider-cont h1{font-size:40px}
+  .cf-hero-stats{gap:18px}
+  .cf-hero-stats strong{font-size:22px}
+  .cf-welcome-visual,.cf-welcome-visual>img{min-height:380px;height:380px}
+}
